@@ -1,0 +1,108 @@
+body{
+  background-color: #a4b4d0;
+}
+.auth-container {
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: whitesmoke ;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .auth-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .auth-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .auth-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing:border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .auth-container input:hover{
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6); 
+  }
+  
+  .auth-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .auth-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .switch-text {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .switch-text span {
+    color: #007bff;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 480px) {
+    .auth-container {
+      padding: 15px;
+      margin: 20px auto;
+    }
+  
+    .auth-container h2 {
+      font-size: 20px;
+    }
+  
+    .auth-container button {
+      font-size: 14px;
+    }
+  }
+  .password-input-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .password-input-container input {
+    width: 100%;
+    padding-right: 40px; /* Make space for the icon */
+    box-sizing: border-box;
+  }
+  
+  .password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 38%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    color: #666;
+  }
+  
+  .password-toggle-icon:hover {
+    color: #333;
+  }

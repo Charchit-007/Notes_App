@@ -1,0 +1,284 @@
+.notes-container {
+  position: relative; 
+  max-width: 800px;
+  width: 95%; /* Added to ensure container shrinks on smaller screens */
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden; /* Prevents content from spilling out */
+}
+
+.notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-right: 50px; /* Makes space for the logout button */
+}
+
+.notes-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 24px;
+  word-break: break-word; /* Prevents overflow for long usernames */
+}
+
+.logout-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 6px 10px;
+  font-size: 14px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  z-index: 999;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+  box-shadow: 0 0 8px rgba(191, 28, 28, 0.6);
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.input-section input,
+.input-section textarea {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+  width: 100%; /* Ensures fields use full width of container */
+  box-sizing: border-box; /* Prevents padding from increasing width */
+}
+
+.input-section input:focus,
+.input-section textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.input-section input:hover,
+.input-section textarea:hover{
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.6); 
+}
+
+.input-section textarea {
+  min-height: 100px; /* Gives more space for content */
+  resize: vertical; /* Allows vertical resizing only */
+}
+
+.input-section input[name="topic"] {
+  width: 60%; /* Reduced width for topic field */
+  max-width: 400px; /* Maximum width */
+  align-self: flex-start; /* Aligns to the left */
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* Allows buttons to wrap on very small screens */
+}
+
+.input-section button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 100px; /* Ensures reasonable button size */
+}
+
+.input-section button:hover {
+  background-color: #2c82de;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+}
+
+.notes-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.note-card {
+  padding: 15px 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  transition: box-shadow 0.3s ease;
+  overflow-wrap: break-word; /* Prevents overflow of long content */
+  word-break: break-word; /* Better handling of long words */
+}
+
+.note-card:hover {
+  box-shadow: 0 0 0 3px rgba(38, 34, 34, 0.08);
+}
+
+.note-card h4 {
+  margin: 0 0 10px;
+  color: #333;
+  cursor: pointer;
+}
+
+.note-card p {
+  margin: 0;
+  color: #555;
+  white-space: pre-wrap; /* Preserves whitespace and wraps */
+  overflow-wrap: break-word;
+}
+
+.note-actions {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.note-actions button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: #28a745;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.note-actions button:last-child {
+  background-color: #dc3545;
+}
+
+.note-actions button:hover {
+  opacity: 0.9;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 16px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+.search-input:hover{
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* Read-only ID field styling */
+.id-field {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .notes-container {
+    padding: 20px 15px;
+    margin: 20px auto;
+    width: 90%;
+  }
+
+  .notes-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 0;
+    margin-bottom: 40px; /* Added space for absolutely positioned logout button */
+  }
+  
+  .notes-header h2 {
+    font-size: 20px;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .input-section button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .notes-container {
+    padding: 15px 12px;
+    border-radius: 15px;
+  }
+
+  .logout-button {
+    top: 15px;
+    right: 15px;
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  .input-section {
+    gap: 8px;
+  }
+  
+  .note-card {
+    padding: 12px 15px;
+  }
+  
+  .note-actions button {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+  
+  .search-input {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+/* Add an extra breakpoint for very small screens */
+@media (max-width: 400px) {
+  .notes-container {
+    width: 95%;
+    padding: 12px 10px;
+    margin: 10px auto;
+  }
+  
+  .notes-header h2 {
+    font-size: 18px;
+  }
+  
+  .search-input {
+    font-size: 13px;
+  }
+}
