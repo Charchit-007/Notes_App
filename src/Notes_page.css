@@ -1,14 +1,14 @@
 .notes-container {
   position: relative; 
   max-width: 800px;
-  width: 95%; /* Added to ensure container shrinks on smaller screens */
+  width: 95%; 
   margin: 40px auto;
   padding: 30px;
   background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   font-family: "Segoe UI", sans-serif;
-  overflow: hidden; /* Prevents content from spilling out */
+  overflow: hidden; 
 }
 
 .notes-header {
@@ -18,14 +18,14 @@
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 20px;
-  padding-right: 50px; /* Makes space for the logout button */
+  padding-right: 50px; 
 }
 
 .notes-header h2 {
   margin: 0;
   color: #333;
   font-size: 24px;
-  word-break: break-word; /* Prevents overflow for long usernames */
+  word-break: break-word; 
 }
 
 .logout-button {
@@ -63,8 +63,8 @@
   border-radius: 12px;
   font-size: 15px;
   transition: border-color 0.3s;
-  width: 100%; /* Ensures fields use full width of container */
-  box-sizing: border-box; /* Prevents padding from increasing width */
+  width: 100%; 
+  box-sizing: border-box;
 }
 
 .input-section input:focus,
@@ -79,20 +79,20 @@
 }
 
 .input-section textarea {
-  min-height: 100px; /* Gives more space for content */
-  resize: vertical; /* Allows vertical resizing only */
+  min-height: 100px; 
+  resize: vertical; 
 }
 
 .input-section input[name="topic"] {
-  width: 60%; /* Reduced width for topic field */
-  max-width: 400px; /* Maximum width */
-  align-self: flex-start; /* Aligns to the left */
+  width: 60%; 
+  max-width: 400px; 
+  align-self: flex-start;
 }
 
 .form-actions {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap; /* Allows buttons to wrap on very small screens */
+  flex-wrap: wrap;
 }
 
 .input-section button {
@@ -104,7 +104,7 @@
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  min-width: 100px; /* Ensures reasonable button size */
+  min-width: 100px; 
 }
 
 .input-section button:hover {
@@ -125,8 +125,8 @@
   border-radius: 15px;
   background-color: #f9f9f9;
   transition: box-shadow 0.3s ease;
-  overflow-wrap: break-word; /* Prevents overflow of long content */
-  word-break: break-word; /* Better handling of long words */
+  overflow-wrap: break-word;
+  word-break: break-word; 
 }
 
 .note-card:hover {
@@ -142,7 +142,7 @@
 .note-card p {
   margin: 0;
   color: #555;
-  white-space: pre-wrap; /* Preserves whitespace and wraps */
+  white-space: pre-wrap;
   overflow-wrap: break-word;
 }
 
@@ -200,7 +200,6 @@
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
 }
 
-/* Read-only ID field styling */
 .id-field {
   background-color: #f0f0f0;
   cursor: not-allowed;
@@ -217,7 +216,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding-right: 0;
-    margin-bottom: 40px; /* Added space for absolutely positioned logout button */
+    margin-bottom: 40px; 
   }
   
   .notes-header h2 {
@@ -266,7 +265,6 @@
   }
 }
 
-/* Add an extra breakpoint for very small screens */
 @media (max-width: 400px) {
   .notes-container {
     width: 95%;

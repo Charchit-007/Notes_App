@@ -89,7 +89,7 @@ body{
   
   .password-input-container input {
     width: 100%;
-    padding-right: 40px; /* Make space for the icon */
+    padding-right: 40px; 
     box-sizing: border-box;
   }
   
